@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.iconstore">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IconStore">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="Icon Store"
             android:screenOrientation="portrait"
             android:exported="true"
@@ -27,9 +30,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="Icon-Store-Finder"
-                    android:pathPrefix="/icons" />
+                    android:scheme="https"
+                    android:host="github.com"
+                    android:pathPrefix="/icons/" />
             </intent-filter>
         </activity>
         <meta-data
